@@ -1,0 +1,25 @@
+{
+  "name": "slack-bolt-demo-bkm",
+  "version": "0.0.1",
+  "description": "A basic template to spin up a Bolt demo app with nedb",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^2.1.1",
+    "nedb":"*"
+  },
+  "engines": {
+    "node": "11.x"
+  },
+  "repository": {
+    "url": "https://github.com/brianmazzaferri/slackboltdemotemplate"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
