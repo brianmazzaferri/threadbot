@@ -1,0 +1,5 @@
+#!/bin/bash
+
+tmux send-keys -t insperity C-c
+tmux send-keys -t insperity “git pull https://www.github.com/brianmazzaferri/ENTERPROJECTNAMEHERE” Enter
+tmux send-keys -t insperity “npm start” Enter
