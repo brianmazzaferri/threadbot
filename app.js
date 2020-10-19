@@ -33,7 +33,24 @@ const app = new App({
 
 //LISTENERS GO HERE
 
-
+app.event("reaction_removed", async ({ event, context }) => {
+  try {
+    console.log(event);
+    if (
+      event.reaction === "threadbot"
+    ) {
+      const result = await app.client.chat.postMessage({
+        token: context.botToken,
+        channel: event.item.channel,
+        thread_ts: event.item.ts,
+        text:
+          "Hello! This is just a gentle reminder to please use the 'start a thread' action on a message to respond to it, rather than posting a new message in channel. This helps keep conversations focused and reduces noise for everyone. Thank you!"
+      });
+    }
+  } catch(error){
+    console.error(error);
+  }
+});
 
 //BOILERPLATE BELOW HERE
 
